@@ -4,7 +4,7 @@ import { TeaCard } from './TeaCard'
 
 
 interface TeaListProps {
-    items: Tea[];
+    items: Tea[]; // Array of Tea objects
 
 }
 
@@ -13,7 +13,7 @@ export function TeaList({items}: TeaListProps) {
     <div>
         {items.map((tea) => (
             <TeaCard 
-            key = {tea.id}
+            key = {tea.id} // React requires a unique key when rendering lists
             name = {tea.name}
             price = {tea.price}
             />

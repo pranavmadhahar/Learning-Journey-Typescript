@@ -1,6 +1,7 @@
 import type { PropsWithChildren, ReactNode } from "react"
 
-
+// PropsWithChildren adds the children prop to the props type
+// ReactNode allows anything React can render (text, elements, fragments, etc.)
 interface CardProps extends PropsWithChildren {
     title : string;
     footer? : ReactNode

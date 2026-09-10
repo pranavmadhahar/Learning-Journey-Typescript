@@ -1,4 +1,5 @@
 // INSTALLS:
+
 // npm init -y
 // npm install -D typescript
 // npx tsc --init
@@ -189,7 +190,7 @@ type coffeeOrder = {
     sugar?: boolean; // optional property
 };
 
-function isCoffeeOrder(obj: any): obj is coffeeOrder {
+function isCoffeeOrder(obj: unknown): obj is coffeeOrder {
     return (
         typeof obj === "object" &&
         obj !== null &&
@@ -451,7 +452,7 @@ function count(a: number, b: number): number {
     return a + b
 }
 
-// VOID: when fn is not returning any datatype
+// VOID: function does not return a useful value
 function logChai(): void {
     console.log(`Chai is ready`)
 };
@@ -662,7 +663,7 @@ class chaiMaker{
     constructor(private heater: Heater){}
 
     make(){
-        this.heater.heat
+        this.heater.heat()
     }
 }
 

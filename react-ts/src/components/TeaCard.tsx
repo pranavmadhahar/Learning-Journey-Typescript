@@ -1,4 +1,3 @@
-
 interface TeaCardProp {
     name: string;
     price: number;
@@ -6,9 +5,11 @@ interface TeaCardProp {
 }
 
 
-export function TeaCard(props){
-    let {name, price, isSpecial}: TeaCardProp = props
+// props is explicitly typed as TeaCardProp
+export function TeaCard(props: TeaCardProp){
+    let {name, price, isSpecial} = props
 
+    // Override the optional prop based on price
     isSpecial = price > 40
 
 
